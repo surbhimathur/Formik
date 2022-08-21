@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding:0;
+}
+section{
+  max-width:1200px;
+  border:1px solid red;
+ margin:0px auto;
+}
+.userform{
+  border:1px solid black;
+height:500px;
+margin:20px auto;
+}
+.personal_details{
+  width:95%;
+  margin:20px auto;
+  border:1px solid red;
+}
+.personal_first_row,.personal_second_row{
+  border:1px solid black;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+.personal_second_row{
+  margin-top:10px;
+}
+.personal_first_row input{
+  margin-right:50px;
+  padding:5px;
+  
+}
+.personal_second_row input{
+  padding:5px;
+}
+.personal_first_row label,.personal_second_row label{
+  margin-right:20px;
+  font-size:14px;
+}
+#name,#address{
+  width:350px;
+}
+#sex,#guardian_label{
+  width:12%;
+}
+span{
+  color:red;
+  font-weight:500;
+}
+#mobile,#country{
+  margin-right:100px;
+  width:300px;
+  
+}
+#govtid{
+  width:150px;
+  margin-right:20px;
+}
+#dob{
+  width:200px;
+}
+.gid{
+  width:250px;
+}
+.guardian_name{
+  margin-left:15px;
+}
+.email{
+  width:220px;
+}
+#emergency{
+  margin-right:0px;
+}
+#state{
+  width:250px;
+  margin-right:50px;
+}
+#city{
+  width:200px;
+}
+#religion{
+  width:150px;
+  margin-right:50px;
+}
+#marital{
+margin-right:50px;
+}
+.buttons{
+  border:1px solid black;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: flex-end;
+  width:95%;
+  margin:0 auto;
+}
+
+.cancel{
+  margin-right:40px;
+  border:1px solid red;
+  color:red;
+  border-radius:5px;
+  padding:10px 15px;
+  background-color:white;
+  letter-spacing:0.5px;
+}
+.submit{
+background-color:green;
+color:white;
+border-radius:5px;
+border:none;
+padding:10px 15px;
+letter-spacing:0.5px;
+}
+h4{
+  text-decoration: underline;
+}
+select{
+  padding:5px;
+}
+.userlist{
+  border:1px solid black;
+  width:250px;
+  margin:30px ;
+}
+.userlist li{
+  list-style-type:none;
+}
