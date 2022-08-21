@@ -4,24 +4,26 @@
 }
 section{
   max-width:1200px;
-  border:1px solid red;
+ 
  margin:0px auto;
 }
 .userform{
   border:1px solid black;
-height:500px;
+
 margin:20px auto;
+padding-bottom:20px;
 }
 .personal_details{
   width:95%;
   margin:20px auto;
-  border:1px solid red;
+ 
 }
 .personal_first_row,.personal_second_row{
-  border:1px solid black;
+
   display:flex;
   flex-direction:row;
   align-items:center;
+  flex-wrap: wrap;
 }
 .personal_second_row{
   margin-top:10px;
@@ -87,7 +89,7 @@ span{
 margin-right:50px;
 }
 .buttons{
-  border:1px solid black;
+ 
   display:flex;
   flex-direction: row;
   align-items:center;

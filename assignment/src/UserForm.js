@@ -46,15 +46,15 @@ function UserForm() {
                            }];
                            setNewUser([...addDetails]);
                     }
-                    
+                   
                 }
     })
+ 
    
-    
   return (
     <section>
     <div className="userform">
-    <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={formik.handleSubmit} >
       <div className="personal_details">
       <h4>Personal Details</h4>
         <div className="personal_first_row">
@@ -184,9 +184,12 @@ function UserForm() {
           <select name="city" id="city" onChange={formik.handleChange}
          value={formik.values.city}>
           <option value="" disabled selected>Enter city/village/town</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
+            <option value="ajmer">Ajmer</option>
+            <option value="gwalior">Gwalior</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="bangalore">Lucknow</option>
+            <option value="bangalore">Agra</option>
+            <option value="bangalore">Mathura</option>
           </select>
         </div>
 
