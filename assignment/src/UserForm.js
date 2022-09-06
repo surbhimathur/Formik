@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useFormik } from 'formik';
 
@@ -12,6 +12,8 @@ const validateForm=(values)=>{
 function UserForm() {
     const[name,setName]=useState([]);
     const[newuser,setNewUser]=useState([]);
+    const[showUser,setshowUser]=useState([]);
+    const[searchTerm,setsearchTerm]=useState();
     const formik=useFormik({
         initialValues:{
             name:'',
@@ -50,6 +52,24 @@ function UserForm() {
                 }
     })
  
+   const handleSearch=(event)=>{
+    setsearchTerm(event.target.value);
+   }
+   useEffect(()=>{
+     if(searchTerm?.length>0)
+     {
+      const search= newuser.filter((se)=>
+      se.name.toLowerCase().includes(searchTerm));
+      console.log(showUser);
+      
+      setshowUser(search);
+     }
+     else{
+      setshowUser(newuser);
+     }
+   
+   
+   },[searchTerm,setNewUser,newuser]);
    
   return (
     <section>
@@ -276,12 +296,19 @@ function UserForm() {
     </div>
 
 
+<div>
+<form>
+  <input type="text" name="filter" onChange={handleSearch} value={searchTerm} placeholder="Search "></input>
+  </form>
+</div>
 
     <div className="userlist">
   <h3>New users list</h3>
-    {newuser.map((list)=>
-        <li>{list.name}</li>
-    )}
+ 
+    {
+    showUser.map((sh)=>
+    <li>{sh.name}</li>)
+    }
     </div>
     </section>
   );
